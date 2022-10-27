@@ -1,10 +1,10 @@
 <?php
 // Por: Diego Espitia
 require_once 'config/define.php';
-header("HTTP/2.0 200 Procesando");
-header('Content-Type: application/json');
 
 $mensaje = new Mensajes;
+
+// Procesando autenticación
 $username = authBasic($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']);
 
 
@@ -13,8 +13,8 @@ if (!$username) {
     $msj = $mensaje->__error("Unauthenticated");
     exit;
 }
-
 $header = "HTTP/2.0 200 OK";
+// Fin autenticación
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     print_r($_POST);
