@@ -1,4 +1,5 @@
 <?php
+// Por: Diego Espitia
 define('HOST', 'localhost');
 define('USER', 'residuos');
 define('PASS', 'r3sidu0s');

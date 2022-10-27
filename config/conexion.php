@@ -1,4 +1,5 @@
 <?php
+// Por: Diego Espitia
 require_once('define.php');
 
 function connect()
